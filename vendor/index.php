@@ -25,26 +25,24 @@
       background-color: #fff;
       border-top: 2px dashed #8c8b8b;
     }
-    h1{
-      color: #fff;
-    }
   </style>
+
 
 </head>
 
 <body class="bg-light">
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto mb-3">
-          <p class="navbar-brand"> <h1>Book A Bus</h1></p>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto">
+          <p class="navbar-brand" >Book A Bus</p>
               <ul class="navbar-nav ml-auto mr-5">
                   <li class="nav-item">
                       <a class="nav-link" href="../passenger/index.php">Passenger</a>
                   </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Staff<span class="sr-only">(current)</span></a>
-                  </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="../vendor/index.php">Vendor</a>
+                      <a class="nav-link" href="../staff/index.php">Staff</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Vendor<span class="sr-only">(current)</span></a>
                   </li>
               </ul>
       </nav>
@@ -53,43 +51,33 @@
   <div class="container">
     <div class="py-5 text-center">
 
-      <h2>Staff Registration</h2>
-      <p class="lead">This is the page for the staff registration and data entry.</p>
+      <h2>Vendor Registration</h2>
+      <p class="lead">This is the page for vendor registration and data entry.</p>
     </div>
 
     <div class="row">
       <div class="mx-auto">
-        <h4 class="mb-3">Staff Data Collection</h4>
+        <h4 class="mb-3">Vendor Data Collection</h4>
         <?php $db->Store_Record(); ?>
         <form method="post">
           <div class="row">
             <div class="col-md-8 mb-3">
-              <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
+              <label for="Name">Vendor Name</label>
+              <input type="text" class="form-control" id="Name" name="Name" placeholder="" value="" required>
             </div>
             <div class="col-md-8 mb-3">
-              <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required>
+              <label for="Email">Vendor Email</label>
+              <input type="Email" class="form-control" id="Email" name="Email" placeholder="you@example.com" value="" required>
+            </div>
+            <div class="col-md-8 mb-3">
+              <label for="Mobile">Phone Number</label>
+              <input type="tel" class="form-control" id="Mobile" name="Mobile" placeholder="" value="">
             </div>
           </div>
 
-          <div class="mb-3">
-            <label for="age">Age</label>
-            <input type="number" class="form-control" id="age" name="age" placeholder="">
-          </div>
+          <br>
+          <hr class="mb-4"><br>
 
-          <div class="mb-3">
-            <label for="mobile">Mobile Number</label>
-            <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="" required>
-          </div>
-
-            <div class="mb-3">
-              <label for="designation">Designation</label>
-              <input type="text" class="form-control" id="designation" name="designation" placeholder="Driver/Conductor" required>
-            </div>
-
-            <br>
-            <hr class="mb-4"><br>
 
             <!-- <input class="btn btn-primary btn-lg btn-block" type="submit" /> -->
             <button class="btn btn-primary btn-lg btn-block" name="btn_save" type="submit"> Submit </button>
@@ -108,5 +96,7 @@
     </footer>
   </div>
 
+
 </body>
+
 </html>

@@ -25,6 +25,9 @@
       background-color: #fff;
       border-top: 2px dashed #8c8b8b;
     }
+    h1{
+      color: #fff;
+    }
   </style>
 
 
@@ -32,8 +35,8 @@
 
 <body class="bg-light">
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto">
-          <p class="navbar-brand" >Book A Bus</p>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto mb-3">
+          <p class="navbar-brand"><h1>Book A Bus</h1></p>
               <ul class="navbar-nav ml-auto mr-5">
                   <li class="nav-item active">
                       <a class="nav-link" href="#">Passenger <span class="sr-only">(current)</span></a>
@@ -42,7 +45,7 @@
                       <a class="nav-link" href="../staff/index.php">Staff</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="#">Ticket</a>
+                      <a class="nav-link" href="../vendor/index.php">Vendor</a>
                   </li>
               </ul>
       </nav>
