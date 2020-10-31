@@ -45,10 +45,9 @@
         <?php $db->Store_Record(); ?>
         <form method="post">
           <div class="row">
-            <div class="col-md-8 mb-3">
-              <label for="ID">Ticket ID</label>
-              <input type="text" name="ID" value="<?php echo $data['ID']; ?>">
-            </div>
+            <input type="hidden" name="ID" value="<?php echo $data['ID']; ?>">
+            <input type="hidden" name="passid" value="<?php echo $data['passid']; ?>">
+
             <div class="col-md-8 mb-3">
               <label for="doj">Date of Journey</label>
               <input type="date" class="form-control" id="doj" name="doj" placeholder="" required value="<?php echo $data['doj']; ?>">
@@ -67,16 +66,6 @@
             <div class="mb-3">
               <label for="seats">Number of Seats</label>
               <input type="number" class="form-control" id="seats" name="seats" placeholder="" required value="<?php echo $data['seats']; ?>">
-            </div>
-
-            <div class="mb-3">
-              <label for="cost">Cost</label>
-              <input type="number" class="form-control" id="cost" name="cost" placeholder="" required value="<?php echo $data['cost']; ?>">
-            </div>
-
-            <div class="mb-3">
-              <label for="passid">Passenger ID</label>
-              <input type="text" class="form-control" id="passid" name="passid" placeholder="" required value="<?php echo $data['passid']; ?>">
             </div>
 
             <br>

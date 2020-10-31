@@ -2,7 +2,6 @@
 
   require_once('dbconfig.php');
   $db = new operations();
-
  ?>
 
 
@@ -25,29 +24,17 @@
       background-color: #fff;
       border-top: 2px dashed #8c8b8b;
     }
+    h1{
+      color: #fff;
+    }
   </style>
 
 
 </head>
 
 <body class="bg-light">
-
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto">
-          <p class="navbar-brand" >Book A Bus</p>
-              <ul class="navbar-nav ml-auto mr-5">
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Passenger</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Vendor</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="#">Staff</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Ticket<span class="sr-only">(current)</span></a>
-                  </li>
-              </ul>
+          <p class="navbar-brand"><h1>Book A Bus</h1></p>
       </nav>
 
 
@@ -69,6 +56,10 @@
               <input type="text" class="form-control" id="ID" name="ID" placeholder="" value="" required>
             </div>
             <div class="col-md-8 mb-3">
+              <label for="passid">Passenger ID</label>
+              <input type="text" class="form-control" id="passid" name="passid" placeholder="" value="">
+            </div>
+            <div class="col-md-8 mb-3">
               <label for="doj">Date of Journey</label>
               <input type="date" class="form-control" id="doj" name="doj" placeholder="" value="" required>
             </div>
@@ -83,14 +74,6 @@
             <div class="col-md-8 mb-3">
               <label for="seats">Number of Seats</label>
               <input type="number" class="form-control" id="seats" name="seats" placeholder="" value="">
-            </div>
-            <div class="col-md-8 mb-3">
-              <label for="cost">Cost</label>
-              <input type="number" class="form-control" id="cost" name="cost" placeholder="" value="">
-            </div>
-            <div class="col-md-8 mb-3">
-              <label for="passid">Passenger ID</label>
-              <input type="text" class="form-control" id="passid" name="passid" placeholder="" value="">
             </div>
           </div>
 

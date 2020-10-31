@@ -67,6 +67,8 @@
                 </div>
             </div>
         </div>
+        <hr>
+        <a href="../admin.php"><button class="btn btn-success btn-lg btn-block">Return To Admin</button></a>
     </div>
 </body>
 </html>

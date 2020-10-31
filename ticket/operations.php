@@ -19,12 +19,11 @@
                 $st_time = $_POST['st_time'];
                 $end_time = $_POST['end_time'];
                 $seats = $_POST['seats'];
-                $cost = $_POST['cost'];
                 $passid = $_POST['passid'];
 
 
 
-                if($this->insert_record($ID, $doj, $st_time, $end_time, $seats, $cost, $passid))
+                if($this->insert_record($ID, $doj, $st_time, $end_time, $seats, $passid))
                 {
                     echo '<div class="alert alert-success"> Your Record Has Been Saved :) </div>';
                     header("Location:view.php");
@@ -37,10 +36,10 @@
         }
 
         // Insert Record in the Database Using Query
-        function insert_record($a,$b,$c,$d,$e,$f,$g)
+        function insert_record($a,$b,$c,$d,$e,$f)
         {
             global $db;
-            $query = "insert into ticket(ID, doj, st_time, end_time, seats, cost, passid) values('$a','$b','$c','$d','$e','$f','$g')";
+            $query = "insert into ticket(ID, doj, st_time, end_time, seats,passid) values('$a','$b','$c','$d','$e','$f')";
             $result = mysqli_query($db->connection,$query);
 
             if($result)
@@ -87,10 +86,9 @@
                 $st_time = $db->check($_POST['st_time']);
                 $end_time = $db->check($_POST['end_time']);
                 $seats = $db->check($_POST['seats']);
-                $cost = $db->check($_POST['cost']);
                 $passid = $db->check($_POST['passid']);
 
-                if($this->update_record($ID,$doj,$st_time,$end_time,$seats,$cost,$passid))
+                if($this->update_record($ID,$doj,$st_time,$end_time,$seats,$passid))
                 {
                     $this->set_messsage('<div class="alert alert-success"> Your Record Has Been Updated : )</div>');
                     header("location:view.php");
@@ -105,10 +103,10 @@
         }
 
         // Update Function 2
-        public function update_record($ID,$doj,$st_time,$end_time,$seats,$cost,$passid)
+        public function update_record($ID,$doj,$st_time,$end_time,$seats,$passid)
         {
             global $db;
-            $sql = "update ticket set doj='$doj', st_time='$st_time', end_time='$end_time', seats='$seats', cost='$cost', passid='$passid' where ID='$ID'";
+            $sql = "update ticket set doj='$doj', st_time='$st_time', end_time='$end_time', seats='$seats' where ID='$ID'";
             $result = mysqli_query($db->connection,$sql);
             if($result)
             {

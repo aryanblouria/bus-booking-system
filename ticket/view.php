@@ -30,13 +30,12 @@
                         ?>
                         <table class="table table-bordered">
                             <tr>
-                                <td style="width: 5%"> Ticket ID </td>
-                                <td style="width: 10%"> Passenger ID </td>
+                                <td style="width: 12%"> Ticket ID </td>
+                                <td style="width: 13%"> Passenger ID </td>
                                 <td style="width: 10%"> Date Of Journey </td>
                                 <td style="width: 10%"> Start Time </td>
                                 <td style="width: 10%"> End Time </td>
                                 <td style="width: 10%"> No Of Seats </td>
-                                <td style="width: 10%"> Cost </td>
                                 <td style="width: 20" colspan="2">Operations</td>
                             </tr>
                             <tr>
@@ -46,12 +45,12 @@
                                 ?>
 
                                     <td><?php echo $data['ID'] ?></td>
+                                    <td><?php echo $data['passid'] ?></td>  
                                     <td><?php echo $data['doj'] ?></td>
                                     <td><?php echo $data['st_time'] ?></td>
                                     <td><?php echo $data['end_time'] ?></td>
                                     <td><?php echo $data['seats'] ?></td>
-                                    <td><?php echo $data['cost'] ?></td>
-                                    <td><?php echo $data['passid'] ?></td>
+
 
 
                                     <td><a href="edit.php?U_ID=<?php echo $data['ID'] ?>" class="btn btn-success">Edit</a></td>
@@ -65,6 +64,7 @@
                 </div>
             </div>
         </div>
+        <a href="../admin.php"><button class="btn btn-success btn-lg btn-block">Return To Admin</button></a>
     </div>
 </body>
 </html>

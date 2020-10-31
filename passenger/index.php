@@ -39,13 +39,13 @@
           <p class="navbar-brand"><h1>Book A Bus</h1></p>
               <ul class="navbar-nav ml-auto mr-5">
                   <li class="nav-item active">
-                      <a class="nav-link" href="#">Passenger <span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#"><h5>Passenger</h5> <span class="sr-only">(current)</span></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="../staff/index.php">Staff</a>
+                      <a class="nav-link" href="../staff/index.php"><h5>Staff</h5></a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="../vendor/index.php">Vendor</a>
+                      <a class="nav-link" href="../vendor/index.php"><h5>Vendor</h5></a>
                   </li>
               </ul>
       </nav>
@@ -132,7 +132,7 @@
             <hr class="mb-4"><br>
 
             <!-- <input class="btn btn-primary btn-lg btn-block" type="submit" /> -->
-            <button class="btn btn-primary btn-lg btn-block" name="btn_save" type="submit"> Submit </button>
+            <button class="btn btn-primary btn-lg btn-block" name="btn_save" type="submit"> Submit</button>
         </form>
       </div>
     </div>

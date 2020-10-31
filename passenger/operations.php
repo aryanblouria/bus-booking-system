@@ -32,7 +32,7 @@
                 if($this->insert_record($ID,$firstName, $middleName, $lastName, $age, $gender, $mobile, $email, $address))
                 {
                     echo '<div class="alert alert-success"> Your Record Has Been Saved :) </div>';
-                    header("Location:view.php");
+                    header("Location:../ticket/index.php");
                 }
                 else
                 {

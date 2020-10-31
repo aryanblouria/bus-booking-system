@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2020 at 02:32 PM
+-- Generation Time: Oct 31, 2020 at 04:23 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -33,9 +33,15 @@ CREATE TABLE `ticket` (
   `st_time` time NOT NULL,
   `end_time` time NOT NULL,
   `seats` int(5) NOT NULL,
-  `cost` int(8) NOT NULL,
   `passid` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `ticket`
+--
+
+INSERT INTO `ticket` (`ID`, `doj`, `st_time`, `end_time`, `seats`, `passid`) VALUES
+('T0001', '2020-12-18', '20:00:00', '21:00:00', 3, 'PA0001');
 
 --
 -- Indexes for dumped tables

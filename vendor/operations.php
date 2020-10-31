@@ -23,7 +23,7 @@
                 if($this->insert_record($ID,$Name, $Email, $Mobile))
                 {
                     echo '<div class="alert alert-success"> Your Record Has Been Saved :) </div>';
-                    header("Location:view.php");
+                    header("Location:index.php");
                 }
                 else
                 {
