@@ -65,6 +65,10 @@
         <form method="post">
           <div class="row">
             <div class="col-md-8 mb-3">
+              <label for="ID">Passenger ID</label>
+              <input type="text" class="form-control" id="ID" name="ID" placeholder="" value="" required>
+            </div>
+            <div class="col-md-8 mb-3">
               <label for="firstName">First name</label>
               <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
             </div>

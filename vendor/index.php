@@ -62,12 +62,16 @@
         <form method="post">
           <div class="row">
             <div class="col-md-8 mb-3">
+              <label for="ID">Vendor ID</label>
+              <input type="text" class="form-control" id="ID" name="ID" placeholder="" value="" required>
+            </div>
+            <div class="col-md-8 mb-3">
               <label for="Name">Vendor Name</label>
               <input type="text" class="form-control" id="Name" name="Name" placeholder="" value="" required>
             </div>
             <div class="col-md-8 mb-3">
               <label for="Email">Vendor Email</label>
-              <input type="Email" class="form-control" id="Email" name="Email" placeholder="you@example.com" value="" required>
+              <input type="email" class="form-control" id="Email" name="Email" placeholder="you@example.com" value="" required>
             </div>
             <div class="col-md-8 mb-3">
               <label for="Mobile">Phone Number</label>

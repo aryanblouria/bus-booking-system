@@ -51,12 +51,12 @@
               <input type="text" class="form-control" id="Name" name="Name" placeholder="" required value="<?php echo $data['Name']; ?>">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-8 mb-3">
               <label for="Email">Email</label>
-              <input type="Email" class="form-control" id="Email" name="Email" placeholder="you@example.com" required value="<?php echo $data['Email']; ?>">
+              <input type="email" class="form-control" id="Email" name="Email" placeholder="you@example.com" required value="<?php echo $data['Email']; ?>">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-8 mb-3">
               <label for="Mobile">Mobile Number</label>
               <input type="number" class="form-control" id="Mobile" name="Mobile" placeholder="" required value="<?php echo $data['Mobile']; ?>">
             </div>

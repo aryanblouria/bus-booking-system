@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 31, 2020 at 02:31 PM
+-- Generation Time: Oct 31, 2020 at 02:32 PM
 -- Server version: 10.4.14-MariaDB
 -- PHP Version: 7.4.11
 
@@ -24,16 +24,17 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- Table structure for table `ticket`
 --
 
-CREATE TABLE `staff` (
-  `ID` varchar(6) NOT NULL,
-  `firstName` varchar(20) NOT NULL,
-  `lastName` varchar(20) NOT NULL,
-  `age` int(11) NOT NULL,
-  `designation` varchar(20) NOT NULL,
-  `mobile` varchar(10) NOT NULL
+CREATE TABLE `ticket` (
+  `ID` varchar(8) NOT NULL,
+  `doj` date NOT NULL,
+  `st_time` time NOT NULL,
+  `end_time` time NOT NULL,
+  `seats` int(5) NOT NULL,
+  `cost` int(8) NOT NULL,
+  `passid` varchar(8) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,9 +42,9 @@ CREATE TABLE `staff` (
 --
 
 --
--- Indexes for table `staff`
+-- Indexes for table `ticket`
 --
-ALTER TABLE `staff`
+ALTER TABLE `ticket`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `ID` (`ID`);
 COMMIT;

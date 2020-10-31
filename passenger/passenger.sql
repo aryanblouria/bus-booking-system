@@ -24,16 +24,19 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `staff`
+-- Table structure for table `passenger`
 --
 
-CREATE TABLE `staff` (
+CREATE TABLE `passenger` (
   `ID` varchar(6) NOT NULL,
   `firstName` varchar(20) NOT NULL,
+  `middleName` varchar(20) NOT NULL,
   `lastName` varchar(20) NOT NULL,
   `age` int(11) NOT NULL,
-  `designation` varchar(20) NOT NULL,
-  `mobile` varchar(10) NOT NULL
+  `gender` enum('M','F','O') NOT NULL,
+  `mobile` bigint(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `address` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,9 +44,9 @@ CREATE TABLE `staff` (
 --
 
 --
--- Indexes for table `staff`
+-- Indexes for table `passenger`
 --
-ALTER TABLE `staff`
+ALTER TABLE `passenger`
   ADD PRIMARY KEY (`ID`),
   ADD UNIQUE KEY `ID` (`ID`);
 COMMIT;

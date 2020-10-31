@@ -13,14 +13,14 @@
             if(isset($_POST['btn_save']))
             {
 
-
+                $ID = $_POST['ID'];
                 $Name = $_POST['Name'];
                 $Email = $_POST['Email'];
                 $Mobile = $_POST['Mobile'];
 
 
 
-                if($this->insert_record($Name, $Email, $Mobile))
+                if($this->insert_record($ID,$Name, $Email, $Mobile))
                 {
                     echo '<div class="alert alert-success"> Your Record Has Been Saved :) </div>';
                     header("Location:view.php");
@@ -33,10 +33,10 @@
         }
 
         // Insert Record in the Database Using Query
-        function insert_record($a,$b,$c)
+        function insert_record($a,$b,$c,$d)
         {
             global $db;
-            $query = "insert into vendor(Name, Email, Mobile) values('$a','$b','$c')";
+            $query = "insert into vendor(ID,Name, Email, Mobile) values('$a','$b','$c','$d')";
             $result = mysqli_query($db->connection,$query);
 
             if($result)

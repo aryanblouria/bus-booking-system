@@ -12,24 +12,19 @@
             global $db;
             if(isset($_POST['btn_save']))
             {
-                // $FirstName = $db->check($_POST['First']);
-                // $LastName = $db->check($_POST['Last']);
-                // $UserName = $db->check($_POST['UserName']);
-                // $UserEmail = $db->check($_POST['UserEmail']);
+
 
                 $ID = $_POST['ID'];
-                $firstName = $_POST['firstName'];
-                $middleName = $_POST['middleName'];
-                $lastName = $_POST['lastName'];
-                $age = $_POST['age'];
-                $gender = $_POST['gender'];
-                $mobile = $_POST['mobile'];
-                $email = $_POST['email'];
-                $address = $_POST['address'];
+                $doj = $_POST['doj'];
+                $st_time = $_POST['st_time'];
+                $end_time = $_POST['end_time'];
+                $seats = $_POST['seats'];
+                $cost = $_POST['cost'];
+                $passid = $_POST['passid'];
 
 
 
-                if($this->insert_record($ID,$firstName, $middleName, $lastName, $age, $gender, $mobile, $email, $address))
+                if($this->insert_record($ID, $doj, $st_time, $end_time, $seats, $cost, $passid))
                 {
                     echo '<div class="alert alert-success"> Your Record Has Been Saved :) </div>';
                     header("Location:view.php");
@@ -42,10 +37,10 @@
         }
 
         // Insert Record in the Database Using Query
-        function insert_record($a,$b,$c,$d,$e,$f,$g,$h,$i)
+        function insert_record($a,$b,$c,$d,$e,$f,$g)
         {
             global $db;
-            $query = "insert into passenger(ID,firstName, middleName, lastName, age, gender, mobile, email, address) values('$a','$b','$c','$d','$e','$f','$g','$h','$i')";
+            $query = "insert into ticket(ID, doj, st_time, end_time, seats, cost, passid) values('$a','$b','$c','$d','$e','$f','$g')";
             $result = mysqli_query($db->connection,$query);
 
             if($result)
@@ -63,7 +58,7 @@
         public function view_record()
         {
             global $db;
-            $query = "select * from passenger";
+            $query = "select * from ticket";
             $result = mysqli_query($db->connection,$query);
             return $result;
         }
@@ -72,7 +67,7 @@
         public function get_record($id)
         {
             global $db;
-            $sql = "select * from passenger where ID='$id'";
+            $sql = "select * from ticket where ID='$id'";
             $data = mysqli_query($db->connection,$sql);
             return $data;
 
@@ -85,23 +80,17 @@
 
             if(isset($_POST['btn_update']))
             {
-                // $ID = $_POST['ID'];
-                // $FirstName = $db->check($_POST['First']);
-                // $LastName = $db->check($_POST['Last']);
-                // $UserName = $db->check($_POST['UserName']);
-                // $Email = $db->check($_POST['UserEmail']);
+
 
                 $ID = $_POST['ID'];
-                $firstName = $db->check($_POST['firstName']);
-                $middleName = $db->check($_POST['middleName']);
-                $lastName = $db->check($_POST['lastName']);
-                $age = $db->check($_POST['age']);
-                $gender = $db->check($_POST['gender']);
-                $mobile = $db->check($_POST['mobile']);
-                $email = $db->check($_POST['email']);
-                $address = $db->check($_POST['address']);
+                $doj = $db->check($_POST['doj']);
+                $st_time = $db->check($_POST['st_time']);
+                $end_time = $db->check($_POST['end_time']);
+                $seats = $db->check($_POST['seats']);
+                $cost = $db->check($_POST['cost']);
+                $passid = $db->check($_POST['passid']);
 
-                if($this->update_record($ID,$firstName,$middleName,$lastName,$age,$gender,$mobile,$email,$address ))
+                if($this->update_record($ID,$doj,$st_time,$end_time,$seats,$cost,$passid))
                 {
                     $this->set_messsage('<div class="alert alert-success"> Your Record Has Been Updated : )</div>');
                     header("location:view.php");
@@ -116,10 +105,10 @@
         }
 
         // Update Function 2
-        public function update_record($ID,$firstName,$middleName,$lastName,$age,$gender,$mobile,$email,$address)
+        public function update_record($ID,$doj,$st_time,$end_time,$seats,$cost,$passid)
         {
             global $db;
-            $sql = "update passenger set firstName='$firstName', lastName='$lastName', middleName='$middleName', age='$age', gender='$gender', mobile='$mobile', email='$email', address='$address' where ID='$ID'";
+            $sql = "update ticket set doj='$doj', st_time='$st_time', end_time='$end_time', seats='$seats', cost='$cost', passid='$passid' where ID='$ID'";
             $result = mysqli_query($db->connection,$sql);
             if($result)
             {
@@ -160,7 +149,7 @@
         public function Delete_Record($id)
         {
             global $db;
-            $query = "delete from passenger where ID='$id'";
+            $query = "delete from ticket where ID='$id'";
             $result = mysqli_query($db->connection,$query);
             if($result)
             {

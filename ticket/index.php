@@ -25,26 +25,27 @@
       background-color: #fff;
       border-top: 2px dashed #8c8b8b;
     }
-    h1{
-      color: #fff;
-    }
   </style>
+
 
 </head>
 
 <body class="bg-light">
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto mb-3">
-          <p class="navbar-brand"> <h1>Book A Bus</h1></p>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mx-auto">
+          <p class="navbar-brand" >Book A Bus</p>
               <ul class="navbar-nav ml-auto mr-5">
                   <li class="nav-item">
-                      <a class="nav-link" href="../passenger/index.php">Passenger</a>
-                  </li>
-                  <li class="nav-item active">
-                      <a class="nav-link" href="#">Staff<span class="sr-only">(current)</span></a>
+                      <a class="nav-link" href="#">Passenger</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="../vendor/index.php">Vendor</a>
+                      <a class="nav-link" href="#">Vendor</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link" href="#">Staff</a>
+                  </li>
+                  <li class="nav-item active">
+                      <a class="nav-link" href="#">Ticket<span class="sr-only">(current)</span></a>
                   </li>
               </ul>
       </nav>
@@ -53,47 +54,49 @@
   <div class="container">
     <div class="py-5 text-center">
 
-      <h2>Staff Registration</h2>
-      <p class="lead">This is the page for the staff registration and data entry.</p>
+      <h2>Ticket Booking</h2>
+      <p class="lead">This is the page for ticket booking and data entry.</p>
     </div>
 
     <div class="row">
       <div class="mx-auto">
-        <h4 class="mb-3">Staff Data Collection</h4>
+        <h4 class="mb-3">Ticket Data Collection</h4>
         <?php $db->Store_Record(); ?>
         <form method="post">
           <div class="row">
             <div class="col-md-8 mb-3">
-              <label for="ID">Staff ID</label>
+              <label for="ticketid">Ticket ID</label>
               <input type="text" class="form-control" id="ID" name="ID" placeholder="" value="" required>
             </div>
             <div class="col-md-8 mb-3">
-              <label for="firstName">First name</label>
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="" value="" required>
+              <label for="doj">Date of Journey</label>
+              <input type="date" class="form-control" id="doj" name="doj" placeholder="" value="" required>
             </div>
             <div class="col-md-8 mb-3">
-              <label for="lastName">Last name</label>
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="" value="" required>
+              <label for="st_time">Start Time</label>
+              <input type="time" class="form-control" id="st_time" name="st_time" placeholder="" value="">
+            </div>
+            <div class="col-md-8 mb-3">
+              <label for="end_time">End Time</label>
+              <input type="time" class="form-control" id="end_time" name="end_time" placeholder="" value="">
+            </div>
+            <div class="col-md-8 mb-3">
+              <label for="seats">Number of Seats</label>
+              <input type="number" class="form-control" id="seats" name="seats" placeholder="" value="">
+            </div>
+            <div class="col-md-8 mb-3">
+              <label for="cost">Cost</label>
+              <input type="number" class="form-control" id="cost" name="cost" placeholder="" value="">
+            </div>
+            <div class="col-md-8 mb-3">
+              <label for="passid">Passenger ID</label>
+              <input type="text" class="form-control" id="passid" name="passid" placeholder="" value="">
             </div>
           </div>
 
-          <div class="mb-3">
-            <label for="age">Age</label>
-            <input type="number" class="form-control" id="age" name="age" placeholder="">
-          </div>
+          <br>
+          <hr class="mb-4"><br>
 
-          <div class="mb-3">
-            <label for="mobile">Mobile Number</label>
-            <input type="tel" class="form-control" id="mobile" name="mobile" placeholder="" required>
-          </div>
-
-            <div class="mb-3">
-              <label for="designation">Designation</label>
-              <input type="text" class="form-control" id="designation" name="designation" placeholder="Driver/Conductor" required>
-            </div>
-
-            <br>
-            <hr class="mb-4"><br>
 
             <!-- <input class="btn btn-primary btn-lg btn-block" type="submit" /> -->
             <button class="btn btn-primary btn-lg btn-block" name="btn_save" type="submit"> Submit </button>
@@ -112,5 +115,7 @@
     </footer>
   </div>
 
+
 </body>
+
 </html>

@@ -12,7 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <title>Viewing the Vendor Records</title>
+    <title>Viewing the Ticket Records</title>
 </head>
 <body class="bg-dark">
 
@@ -21,7 +21,7 @@
             <div class="col">
                 <div class="card mt-5">
                     <div class="card-header">
-                        <h2 class="text-center text-dark"> Vendor Records </h2>
+                        <h2 class="text-center text-dark"> Ticket Records </h2>
                     </div>
                     <div class="card-body">
                         <?php
@@ -30,10 +30,13 @@
                         ?>
                         <table class="table table-bordered">
                             <tr>
-                                <td style="width: 5%"> ID </td>
-                                <td style="width: 10%"> Name </td>
-                                <td style="width: 10%"> Email </td>
-                                <td style="width: 10%"> Mobile Number </td>
+                                <td style="width: 5%"> Ticket ID </td>
+                                <td style="width: 10%"> Passenger ID </td>
+                                <td style="width: 10%"> Date Of Journey </td>
+                                <td style="width: 10%"> Start Time </td>
+                                <td style="width: 10%"> End Time </td>
+                                <td style="width: 10%"> No Of Seats </td>
+                                <td style="width: 10%"> Cost </td>
                                 <td style="width: 20" colspan="2">Operations</td>
                             </tr>
                             <tr>
@@ -41,14 +44,14 @@
                                     while($data = mysqli_fetch_assoc($result))
                                     {
                                 ?>
-                                    <!-- <td><?php echo $data['ID'] ?></td>
-                                    <td><?php echo $data['Name'] ?></td>
-                                    <td><?php echo $data['Email'] ?></td> -->
 
                                     <td><?php echo $data['ID'] ?></td>
-                                    <td><?php echo $data['Name'] ?></td>
-                                    <td><?php echo $data['Email'] ?></td>
-                                    <td><?php echo $data['Mobile'] ?></td>
+                                    <td><?php echo $data['doj'] ?></td>
+                                    <td><?php echo $data['st_time'] ?></td>
+                                    <td><?php echo $data['end_time'] ?></td>
+                                    <td><?php echo $data['seats'] ?></td>
+                                    <td><?php echo $data['cost'] ?></td>
+                                    <td><?php echo $data['passid'] ?></td>
 
 
                                     <td><a href="edit.php?U_ID=<?php echo $data['ID'] ?>" class="btn btn-success">Edit</a></td>

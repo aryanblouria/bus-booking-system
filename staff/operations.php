@@ -17,13 +17,14 @@
                 // $UserName = $db->check($_POST['UserName']);
                 // $UserEmail = $db->check($_POST['UserEmail']);
 
+                $ID = $_POST['ID'];
                 $firstName = $_POST['firstName'];
                 $lastName = $_POST['lastName'];
                 $age = $_POST['age'];
                 $mobile = $_POST['mobile'];
                 $designation = $_POST['designation'];
 
-                if($this->insert_record($firstName, $lastName, $age, $mobile, $designation))
+                if($this->insert_record($ID,$firstName, $lastName, $age, $mobile, $designation))
                 {
                     echo '<div class="alert alert-success"> Your Record Has Been Saved :) </div>';
                     header("Location:view.php");
@@ -36,10 +37,10 @@
         }
 
         // Insert Record in the Database Using Query
-        function insert_record($a,$b,$c,$d,$e)
+        function insert_record($a,$b,$c,$d,$e,$f)
         {
             global $db;
-            $query = "insert into staff(firstName, lastName, age, mobile, designation) values('$a','$b','$c','$d','$e')";
+            $query = "insert into staff(ID,firstName, lastName, age, mobile, designation) values('$a','$b','$c','$d','$e','$f')";
             $result = mysqli_query($db->connection,$query);
 
             if($result)

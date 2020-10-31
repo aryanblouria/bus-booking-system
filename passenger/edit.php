@@ -52,7 +52,7 @@
             </div>
             <div class="col-md-8 mb-3">
               <label for="middleName">Middle name</label>
-              <input type="text" class="form-control" id="middleName" name="middleName" placeholder="" required value="<?php echo $data['middleName']; ?>">
+              <input type="text" class="form-control" id="middleName" name="middleName" placeholder=""  value="<?php echo $data['middleName']; ?>">
             </div>
             <div class="col-md-8 mb-3">
               <label for="lastName">Last name</label>
