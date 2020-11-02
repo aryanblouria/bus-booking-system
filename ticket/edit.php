@@ -53,23 +53,23 @@
               <input type="date" class="form-control" id="doj" name="doj" placeholder="" required value="<?php echo $data['doj']; ?>">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-8 mb-3">
               <label for="st_time">Start Time</label>
               <input type="time" class="form-control" id="st_time" name="st_time" placeholder="" required value="<?php echo $data['st_time']; ?>">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-8 mb-3">
               <label for="end_time">End Time</label>
               <input type="time" class="form-control" id="end_time" name="end_time" placeholder="" required value="<?php echo $data['end_time']; ?>">
             </div>
 
-            <div class="mb-3">
+            <div class="col-md-8 mb-3">
               <label for="seats">Number of Seats</label>
               <input type="number" class="form-control" id="seats" name="seats" placeholder="" required value="<?php echo $data['seats']; ?>">
             </div>
 
             <br>
-            <hr class="mb-4"><br>
+            <div class="col-md-8 mb-3">
 
             <!-- <input class="btn btn-primary btn-lg btn-block" type="submit" /> -->
             <button class="btn btn-success btn-lg btn-block" name="btn_update" type="submit"> Update </button>
